@@ -8,7 +8,7 @@ Plugin Name: Admin Bar+
 Plugin URI:
 Description: This plugin adds all WordPress pages from the admin sidebar under the "site-name" menu on the front-end.
 Author: Kostas Vrouvas & The Codesigns.gr Dev Team
-Version: 1.0
+Version: 1.0.1
 Author URI: https://profiles.wordpress.org/kosvrouvas
 */
 
@@ -213,18 +213,42 @@ global $wp_admin_bar;
 				'href'   => admin_url('options-permalink.php'),
 			) );
 
+/**
+* Add third party plugin support
+*
+* @since 1.0.1
+*/
+			//Check for third party plugins
+			include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
 
-			if (function_exists('RevSliderFront')) {
+			// check for RevSlider
+			if ( is_plugin_active( 'revslider/revslider.php' ) ) {
+				//If plugin is activated then
 				$wp_admin_bar->add_menu( array(
 					'parent' => 'site-name',
 					'id'     => 'revslider',
 					'title'  => __( 'Revolution Slider' ),
 					'href'   => admin_url('admin.php?page=revslider'),
 				) );
-			} else {
+				}
 
+			//Check for WooCommerce
+			if ( is_plugin_active( 'woocommerce/woocommerce.php' ) ) {
+				//If plugin is activated then
+				$wp_admin_bar->add_menu( array(
+					'parent' => 'site-name',
+					'id'     => 'woocomm',
+					'title'  => __( 'WooCommerce' ),
+					'href'   => admin_url('edit.php?post_type=shop_order'),
+				) );
+				//WooCommerce Products 
+				$wp_admin_bar->add_menu( array(
+							'parent' => 'woocomm',
+							'id'     => 'woocomm-products',
+							'title'  => __( 'Products' ),
+							'href'   => admin_url('edit.php?post_type=product'),
+				) );
 			}
-
 	}
 }
 ?>
