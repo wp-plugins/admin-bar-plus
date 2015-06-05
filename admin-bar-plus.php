@@ -212,6 +212,19 @@ global $wp_admin_bar;
 				'title'  => __( 'Permalink' ),
 				'href'   => admin_url('options-permalink.php'),
 			) );
+
+
+			if (function_exists('RevSliderFront')) {
+				$wp_admin_bar->add_menu( array(
+					'parent' => 'site-name',
+					'id'     => 'revslider',
+					'title'  => __( 'Revolution Slider' ),
+					'href'   => admin_url('admin.php?page=revslider'),
+				) );
+			} else {
+
+			}
+
 	}
 }
 ?>
