@@ -1,14 +1,14 @@
 <?php
 /**
  * @package admin-bar-plus
- * @version 0.1
+ * @version 1.0
  */
 /*
 Plugin Name: Admin Bar+
 Plugin URI:
 Description: This plugin adds all WordPress pages from the admin sidebar under the "site-name" menu on the front-end.
 Author: Kostas Vrouvas & The Codesigns.gr Dev Team
-Version: 0.1
+Version: 1.0
 Author URI: https://profiles.wordpress.org/kosvrouvas
 */
 
