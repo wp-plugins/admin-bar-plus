@@ -16,6 +16,10 @@ This plugin adds all WordPress pages from the admin sidebar under the "site-name
 
 Feedback is much appreciated & more features will follow.
 
+== Screenshots ==
+
+1. Plugin activated with Revolution Slider installed.
+
 == Changelog ==
 = 1.0.1 =
 - Third party plugin support
