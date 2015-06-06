@@ -18,7 +18,7 @@ Feedback is much appreciated & more features will follow.
 
 == Screenshots ==
 
-1. Plugin activated with Revolution Slider installed.
+1. Plugin activated showing the menus with Revolution Slider installed.
 
 == Changelog ==
 = 1.0.1 =
