@@ -17,6 +17,8 @@ This plugin adds all WordPress pages from the admin sidebar under the "site-name
 Feedback is much appreciated & more features will follow.
 
 == Changelog ==
+= 1.0.1 =
+- Third party plugin support
 
-= 0.1 =
+= 1.0 =
 - Initial release
